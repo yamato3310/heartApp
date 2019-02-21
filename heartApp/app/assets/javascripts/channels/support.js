@@ -10,8 +10,7 @@ App.support = App.cable.subscriptions.create("SupportChannel", {
     received: function (message) {
       console.log(message);
       // Called when there's incoming data on the websocket for this channel
-      //if (message['message'] === 'add') addHeart();
-      addHeart();
+      if (message['message'] === 'add') addHeart();
     },
 
     add: function (message) {

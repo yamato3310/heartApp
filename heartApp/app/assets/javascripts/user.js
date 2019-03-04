@@ -4,7 +4,7 @@ var count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener("devicemotion", (e) => {
     if (e.acceleration.x <= 10) return;
     count++;
-    if (count !== 4) return; 
+    if (count !== 10) return; 
     count = 0;
     $('#x').text(e.acceleration.x);
     App.support.add('add');

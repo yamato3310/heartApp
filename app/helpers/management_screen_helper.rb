@@ -1,0 +1,2 @@
+module ManagementScreenHelper
+end

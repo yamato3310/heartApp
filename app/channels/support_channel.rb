@@ -10,6 +10,6 @@ class SupportChannel < ApplicationCable::Channel
   end
 
   def add(message)
-    ActionCable.server.broadcast 'support_channel', message: message
+    ActionCable.server.broadcast 'support_channel', message
   end
 end

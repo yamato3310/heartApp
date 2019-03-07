@@ -1,5 +1,10 @@
-<h1>ManagementScreen#show</h1>
-<p>Find me in app/views/management_screen/show.html.erb</p>
+<div>ハートを一つ追加するボタン　
 <input type='button' value='ハートを追加' id='add' data-behavior="heart_add" />
+</div>
+<div>ハートを継続的に追加するボタン　
+<input type='button' value='たくさん追加' id='loop'>
+<input type='button' value='ストップ' id='stop'>
+</div>
 <%= javascript_include_tag 'channels/support.js' %>
 <%= javascript_include_tag 'management_screen.js' %>
+

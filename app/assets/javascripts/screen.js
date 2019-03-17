@@ -5,9 +5,9 @@ let image;
 let mainCanvas;
 
 let heartFlg = false;
+let video = document.getElementsByClassName('video');
 
 document.addEventListener('keypress', e => {
-    console.log(e.keyCode)
     let video = document.getElementsByClassName('video');
     if (e.keyCode === 13 && !heartFlg) {
         heartFlg = true;
@@ -35,6 +35,8 @@ draw = () => {
 
 mousePressed = () => {
     if (!heartFlg && hearts.length < 350) return;
+    if (video[0].currentTime >= 160) return;
+
     hearts.push(new Heart());
 }
 
@@ -47,6 +49,8 @@ setup = () => {
 
 addHeart = () => {
     if (!heartFlg && hearts.length < 350) return;
+    if (video.currentTime[0] > 160) return;
+    
     hearts.push(new Heart());
 }
 

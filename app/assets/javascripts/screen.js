@@ -4,11 +4,22 @@ var hearts = [];
 var image;
 var mainCanvas;
 
+let heartFlg = false;
+
+document.addEventListener('keypress', e => {
+    console.log(hearts.length)
+    let video = document.getElementsByClassName('video');
+    if (e.keyCode === 13 && !heartFlg) {
+        heartFlg = true;
+        video[0].play();
+    } else {
+        heartFlg = false;
+        video[0].pause();
+    }
+});
+
 function draw() {
     createCanvas(screen.width, screen.height);
-    //this.mainCanvas.clearRect(0,0, screen.width, screen.height);
-    //this.mainCanvas.width = canvas.width;
-    //this.mainCanvas.fillStyle = "rgba(0,0,0,0)";
     for (let heart of hearts) {
         heart.update();
         heart.display();
@@ -16,20 +27,19 @@ function draw() {
 }
 
 function mousePressed() {
+    if (!heartFlg && hearts.length < 350) return;
     hearts.push(new Heart());
 }
 
-//setInterval(mousePressed, 50);
+setInterval(mousePressed, 50);
 
 setup = () => {
     createCanvas(screen.width, screen.height);
-    //this.mainCanvas.fillStyle = "rgba(0,0,0,0)";
-    //let video = createVideo(['assets/videos/test.mp4']).autoplay(true);
-    //image = loadImage("../images/floor.png");
     colorMode(RGB, 255, 255, 255, 255);
 }
 
 addHeart = () => {
+    if (!heartFlg && hearts.length < 350) return;
     hearts.push(new Heart());
 }
 
@@ -37,11 +47,8 @@ function Heart() {
     this.posX = Math.random() * screen.width;
     this.posY = screen.height;
     this.size = 100;
-    //this.color = ["pink", "#FF7EFA"];
     this.color = ["#7E88FF", "#FF7EFA", "#7EFFEB", "#B0FF7E", "#FFF57E", "#FF7E7E"];
-    //this.num = 0;
     this.num = Math.floor(Math.random() * 6);
-    //this.scale = 30;
     this.scale = Math.random() * 0.5;
 
     this.update = function () {
@@ -50,7 +57,6 @@ function Heart() {
     }
 
     this.display = function () {
-        // fill("#FF7EFA");
         fill(this.color[this.num])
         scale(this.scale);
         let posX = this.posX * (1 / this.scale);
@@ -66,7 +72,6 @@ function Heart() {
         ctx.quadraticCurveTo(posX + -40, posY + 0, posX + 0, posY + 36);
         ctx.fill();
 
-        // ctx.restore();
         scale(1 / this.scale)
     }
 

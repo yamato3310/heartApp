@@ -1,3 +1,184 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    overflow: hidden;
+  }
+  
+  body{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none; 
+  }
+  
+  #event_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+  }
+  
+  #effect_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+  }
+  
+  .first_circle_effect{
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    width: 70vw;
+    background-color: transparent;
+    height: 70vw;
+    border-radius: 50%;
+    border: 9px solid white;
+    z-index: 100;
+  }
+  
+  .second_circle_effect{
+    margin: 3%;
+    width: 94%;
+    height: 94%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+  }
+  
+  .first_circle {
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    width: 70vw;
+    background-color: transparent;
+    height: 70vw;
+    border-radius: 50%;
+    border: 9px solid white;
+  }
+  
+  .second_circle {
+    margin: 3%;
+    width: 94%;
+    height: 94%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+  }
+  
+  .second_circle img{
+  pointer-events: none;
+  }
+  
+  .heart {
+    width: 75%;
+    height: 75%;
+    margin: 12.5%;
+  }
+  
+  .tap {
+    margin: -65% auto 0;
+    font-family: vdl-megamaru, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  
+  /* 色切り替え */
+  .red {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #FF7E7E;
+    color: #FF7E7E;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .yellow {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #FFF57E;
+    color: #FFF57E;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .green {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #B0FF7E;
+    color: #B0FF7E;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .lightblue {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #7EFFEB;
+    color: #7EFFEB;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .blue {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #7E88FF;
+    color: #7E88FF;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .purple {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #FF7EFA;
+    color: #FF7EFA;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* アニメーションの実装 */
+  
+  @keyframes pulse {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes effect{
+    10%{
+      transform: scale3d(1.1, 1.1, 1.1);
+      opacity: 0;
+    }
+    85%{
+      transform: scale3d(1.8, 1.8, 1.8);
+      opacity: 0.5;
+    }
+    100%{
+      transform: scale3d(1.9, 1.9, 1.9);
+      opacity: 0;
+    }
+  }

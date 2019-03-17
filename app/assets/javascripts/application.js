@@ -15,4 +15,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require p5
+//= require p5.dom.min
 //= require cable.js

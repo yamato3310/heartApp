@@ -2,9 +2,13 @@
 // All this logic will automatically be available in application.js.
 var hearts = [];
 var image;
+var mainCanvas;
 
 function draw() {
-    background(0);
+    createCanvas(screen.width, screen.height);
+    //this.mainCanvas.clearRect(0,0, screen.width, screen.height);
+    //this.mainCanvas.width = canvas.width;
+    //this.mainCanvas.fillStyle = "rgba(0,0,0,0)";
     for (let heart of hearts) {
         heart.update();
         heart.display();
@@ -19,8 +23,10 @@ function mousePressed() {
 
 setup = () => {
     createCanvas(screen.width, screen.height);
-    background(0);
+    //this.mainCanvas.fillStyle = "rgba(0,0,0,0)";
+    //let video = createVideo(['assets/videos/test.mp4']).autoplay(true);
     //image = loadImage("../images/floor.png");
+    colorMode(RGB, 255, 255, 255, 255);
 }
 
 addHeart = () => {
@@ -31,6 +37,10 @@ function Heart() {
     this.posX = Math.random() * screen.width;
     this.posY = screen.height;
     this.size = 100;
+    //this.color = ["pink", "#FF7EFA"];
+    this.color = ["#7E88FF", "#FF7EFA", "#7EFFEB", "#B0FF7E", "#FFF57E", "#FF7E7E"];
+    //this.num = 0;
+    this.num = Math.floor(Math.random() * 6);
     //this.scale = 30;
     this.scale = Math.random() * 0.5;
 
@@ -40,7 +50,8 @@ function Heart() {
     }
 
     this.display = function () {
-        fill('pink');
+        // fill("#FF7EFA");
+        fill(this.color[this.num])
         scale(this.scale);
         let posX = this.posX * (1 / this.scale);
         let posY = this.posY * (1 / this.scale);

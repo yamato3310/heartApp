@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            background: black;
+            overflow: scroll;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .p5Canvas{
+            position: absolute;
+            top: 0;
+            z-index: 100
+
+        }
+        video {
+            position: absolute;
+            z-index: 10;
+            width: 500%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <%= javascript_include_tag 'screen.js' %>
     <%= javascript_include_tag 'channels/support.js' %>
+    <%= video_tag("/assets/videos/0.2.mp4", :autoplay => true, :loop => true, :muted => true, style: "width:100%;z-index: 0") %>
 </body>
 
 </html>

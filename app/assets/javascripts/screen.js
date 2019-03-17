@@ -1,13 +1,13 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-var hearts = [];
-var image;
-var mainCanvas;
+let hearts = [];
+let image;
+let mainCanvas;
 
 let heartFlg = false;
 
 document.addEventListener('keypress', e => {
-    console.log(hearts.length)
+    console.log(e.keyCode)
     let video = document.getElementsByClassName('video');
     if (e.keyCode === 13 && !heartFlg) {
         heartFlg = true;
@@ -16,9 +16,16 @@ document.addEventListener('keypress', e => {
         heartFlg = false;
         video[0].pause();
     }
+    
+    if (e.keyCode === 115 && heartFlg == false) {
+        console.log("aa")
+        video[0].currentTime = 150;
+        video[0].play();
+        heartFlg = true;
+    }
 });
 
-function draw() {
+draw = () => {
     createCanvas(screen.width, screen.height);
     for (let heart of hearts) {
         heart.update();
@@ -26,7 +33,7 @@ function draw() {
     }
 }
 
-function mousePressed() {
+mousePressed = () => {
     if (!heartFlg && hearts.length < 350) return;
     hearts.push(new Heart());
 }
@@ -75,7 +82,7 @@ function Heart() {
         scale(1 / this.scale)
     }
 
-    this.deleteHeart = (currentHeart) => {
+    this.deleteHeart = currentHeart => {
         const index = hearts.indexOf(currentHeart);
         hearts.splice(index, 1);
     }

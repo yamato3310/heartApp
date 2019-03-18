@@ -26,6 +26,7 @@ document.addEventListener('keypress', e => {
 });
 
 draw = () => {
+    //console.log(hearts)
     createCanvas(screen.width, screen.height);
     for (let heart of hearts) {
         heart.update();
@@ -40,7 +41,7 @@ mousePressed = () => {
     hearts.push(new Heart());
 }
 
-setInterval(mousePressed, 50);
+//setInterval(mousePressed, 50);
 
 setup = () => {
     createCanvas(screen.width, screen.height);
@@ -49,7 +50,7 @@ setup = () => {
 
 addHeart = () => {
     if (!heartFlg && hearts.length < 350) return;
-    if (video.currentTime[0] > 160) return;
+    if (video.currentTime > 160) return;
     
     hearts.push(new Heart());
 }

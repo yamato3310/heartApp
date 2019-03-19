@@ -4,7 +4,7 @@ let hearts = [];
 let image;
 let mainCanvas;
 
-let heartFlg = false;
+let heartFlg = true;
 let video = document.getElementsByClassName('video');
 
 document.addEventListener('keypress', e => {

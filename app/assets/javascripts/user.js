@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 var count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener("devicemotion", (e) => {
-    if (e.acceleration.x <= 10) return;
+    if (e.acceleration.x <= 20) return;
     count++;
     if (count !== 10) return; 
     count = 0;

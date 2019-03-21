@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'user/use'
+  root to 'user#use'
 
   get 'management_screen/show'
 

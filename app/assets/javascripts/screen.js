@@ -18,7 +18,6 @@ document.addEventListener('keypress', e => {
     }
     
     if (e.keyCode === 115 && heartFlg == false) {
-        console.log("aa")
         video[0].currentTime = 150;
         video[0].play();
         heartFlg = true;
@@ -26,7 +25,6 @@ document.addEventListener('keypress', e => {
 });
 
 draw = () => {
-    //console.log(hearts)
     createCanvas(screen.width, screen.height);
     for (let heart of hearts) {
         heart.update();

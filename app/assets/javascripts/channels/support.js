@@ -1,6 +1,5 @@
 App.support = App.cable.subscriptions.create("SupportChannel", {
     connected: function (message) {
-      console.log(message);
     },
 
     disconnected: function () {
@@ -8,7 +7,6 @@ App.support = App.cable.subscriptions.create("SupportChannel", {
     },
 
     received: function (message) {
-      console.log(message);
       // Called when there's incoming data on the websocket for this channel
       if (message['message'] === 'add') addHeart();
     },

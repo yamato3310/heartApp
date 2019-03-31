@@ -1,32 +1,105 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>岩崎学園入学式2019</title>
-    <link rel="stylesheet" href="iphone_len_style.css" media="screen and (max-width: 480px)">
-</head>
-
-<body oncontextmenu="return false" oncopy="return false" onfocus="return false">
-    <section id="container" class="red">
-        <section id="event_container">
-            <div class="first_circle">
-                <div class="second_circle">
-                    <%= image_tag 'heart.png', :class => "heart" %>
+    <header id="header_wrap">
+        <div class="border_wrapper">
+            <div class="border_top"></div><div class="border_radius_top"></div>
+            <div class="scroll_text">scroll</div>
+        </div>
+        <div>
+            <figure>
+                <%= image_tag  "logo.png" %>
+            </figure>
+            <div class="info">
+                <h1>情報科学専門学校</h1>
+                <h3>入学式パフォーマンス2019</h3>
+                <button class="app_button"><a href="#">WEBアプリを起動 ></a></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="mask"></div>
+        <section>
+            <div class="info_img">
+                <%= image_tag "hello_isc.png" %>
+            </div>
+            <p class="attention">
+                <span>
+                    新入生の皆さん<br>
+                    ご入学おめでとうございます!<br>
+                </span>
+                <span class="attention_section">
+                    私たち情報科学専門は<br>
+                    <span class="strong">【IT × アイドル】</span><br>
+                    をテーマにパフォーマンスを披露します。<br>
+                </span>
+                <span>
+                    こちらではアイドルライブを盛り上げる<br>
+                    WEBアプリの使い方をご説明します。<br>
+                </span>
+            </p>
+            <button class="start_button">
+                <div>
+                    <%= image_tag  "button_icon.png" %>
+                    <span>起動</span>
                 </div>
-                <div class="tap">Tap !</div>
-            </div>
-            </div>
+            </button>
+            <div class="border_1 common_border"></div><div class="common_border_radius"></div></div>
         </section>
-        <section id="effect_container">
-            <div class="first_circle_effect">
-                <div class="second_circle_effect"></div>
-            </div>
+        <section>
+        <ul id="app_info_container">
+            <li>
+                <figure class="description">
+                    <%= image_tag "app_image_1.gif", :id=>"app_image"%>
+                </figure>
+                <h3 class="number_label"><div>1</div></h3>
+                <p class="main_text">
+                    WEBアプリに<br>
+                    アクセス
+                </p>
+                <div class="border_2 common_border"></div><div class="common_border_radius"></div>
+            </li>
+            <li>
+                <figure class="description">
+                    <%= image_tag "app_image_2.gif" %>
+                </figure>
+                <%= image_tag "app_image_3.png", :class => "app_image cover_app_image" %>
+                <h3 class="number_label"><div>2</div></h3>
+                <p class="main_text">
+                    スマホを振ると<br>
+                    アイドルたちに「いいね！」を<br>
+                    送信することができます
+                </p>
+                <div class="border_3 common_border"></div><div class="common_border_radius"></div>
+            </li>
+            <li>
+                <figure class="app_image_wrapper">
+                    <%= image_tag "app_image_3_1.png", :class => "app_image" %>
+                    <%= image_tag "app_image_3_2.png", :class => "app_image" %>
+                    <%= image_tag "app_image_3_3.png", :class => "app_image" %>
+                </figure>
+                <h3 class="number_label"><div>3</div></h3>
+                <p class="main_text">
+                    真ん中のハートをタップすると<br>
+                    スマホスライドの色が変わる！<br>
+                    推しの色で応援しよう
+                </p>
+            </li>
+        </ul>
         </section>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <%= javascript_include_tag 'user.js' %>
-</body>
-</html>
+    </main>
+    <footer>
+        <div class="footer_mask"></div>
+        <div class="footer_wrapper">
+            <div id="footer_logo_container">
+                <figure>
+                    <%= image_tag "logo.png", :class => "footer_image" %>
+                </figure>
+                <div id="footer_top">
+                    <span>情報科学専門学校</span>
+                    <span>入学式パフォーマンス2019</span>
+                </div>
+            </div>
+            <p class="day">4.6 Sat.</p>
+            <small>
+                <span>CAST</span>/さきぴ　こっとん　はるる　みぽりん　づっき　ゆうたん　<span>開発</span>/Make IT　<span>テスト協力</span>/IPFactory
+            </small>
+        </div>
+    </footer>

@@ -1,0 +1,20 @@
+<body oncontextmenu="return false" oncopy="return false" onfocus="return false" id="heart_body">
+    <section id="container" class="red">
+        <section id="event_container">
+            <div class="first_circle">
+                <div class="second_circle">
+                    <%= image_tag 'heart.png', :class => "heart" %>
+                </div>
+                <div class="tap">Tap !</div>
+            </div>
+            </div>
+        </section>
+        <section id="effect_container">
+            <div class="first_circle_effect">
+                <div class="second_circle_effect"></div>
+            </div>
+        </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <%= javascript_include_tag 'user.js' %>
+</body>

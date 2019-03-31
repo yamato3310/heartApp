@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'user/use'
 
+  get 'user/show'
+
   get 'management_screen/show'
 
   get 'screen/show'

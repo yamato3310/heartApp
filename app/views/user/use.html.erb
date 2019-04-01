@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>岩崎学園入学式2019</title>
+    <%= stylesheet_link_tag "top" %>
+</head>
+<body>
     <header id="header_wrap">
         <div class="border_wrapper">
             <div class="border_top"></div><div class="border_radius_top"></div>
@@ -5,12 +16,12 @@
         </div>
         <div>
             <figure>
-                <%= image_tag  "logo.png" %>
+                <%= image_tag "logo.png" %>
             </figure>
             <div class="info">
                 <h1>情報科学専門学校</h1>
                 <h3>入学式パフォーマンス2019</h3>
-                <button class="app_button"><a href="#">WEBアプリを起動 ></a></button>
+                <button class="app_button"><a href="http://iwasaki2019.com:3000/user/show">WEBアプリを起動 ></a></button>
             </div>
         </div>
     </header>
@@ -35,7 +46,7 @@
                     WEBアプリの使い方をご説明します。<br>
                 </span>
             </p>
-            <button class="start_button">
+            <button class="start_button" onClick="location_button()">
                 <div>
                     <%= image_tag  "button_icon.png" %>
                     <span>起動</span>
@@ -103,3 +114,11 @@
             </small>
         </div>
     </footer>
+    <script>
+        function location_button () {
+            console.log("aaa");
+            location.href = "http://192.168.3.14:3000/user/show";
+        }
+    </script>
+</body>
+</html>

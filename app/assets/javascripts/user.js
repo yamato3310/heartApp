@@ -11,6 +11,7 @@ window.addEventListener("devicemotion", (e) => {
 })
 
 window.onload = function(){
+    // if (location.href == "192.168.3.14:3000/user/show") location.href
     window.scrollTo(0,0);
     
 $('#event_container').click(function () {
@@ -49,3 +50,13 @@ $(function () {
             })
         })
     })};
+
+// $("#start_button div").on("click", () => {
+//     console.log("aaa");
+//     location.href = "http://192.168.3.14:3000/user/show";
+// })
+
+// const location = () => {
+//     console.log("aaa");
+//     location.href = "http://192.168.3.14:3000/user/show";
+// }

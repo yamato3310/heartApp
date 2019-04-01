@@ -1,8 +1,8 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-var count = 0; // var使いたくないけど別の方法がわからない
+let count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener("devicemotion", (e) => {
-    if (e.acceleration.x <= 20) return;
+    if (e.acceleration.x <= 10) return;
     count++;
     if (count !== 10) return; 
     count = 0;
@@ -10,8 +10,8 @@ window.addEventListener("devicemotion", (e) => {
     App.support.add('add');
 })
 
-window.onload = function(){
-    // if (location.href == "192.168.3.14:3000/user/show") location.href
+window.onload = () => {
+
     window.scrollTo(0,0);
     
 $('#event_container').click(function () {
@@ -36,20 +36,19 @@ $('#event_container').click(function () {
     } else {};
 });
 
-$(function () {
-    $("#event_container").on("click", function () {
-        $(this).css("animation", "pulse 0.2s");
-        let copied = $(this).clone(true);
-        $(this).before(copied);
-        $(this).remove();
-            $("#effect_container").css("animation", "effect 1s", );
-            let copy = $("#effect_container").clone(true);
-            $("#effect_container").before(copy);
-            $("#effect_container").on('animationend',function(){
-                $(this).remove();
-            })
+$("#event_container").on("click", function () {
+    $(this).css("animation", "pulse 0.2s");
+    let copied = $(this).clone(true);
+    $(this).before(copied);
+    $(this).remove();
+        $("#effect_container").css("animation", "effect 1s", );
+        let copy = $("#effect_container").clone(true);
+        $("#effect_container").before(copy);
+        $("#effect_container").on('animationend',function(){
+            $(this).remove();
         })
-    })};
+    })
+};
 
 // $("#start_button div").on("click", () => {
 //     console.log("aaa");

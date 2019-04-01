@@ -33,8 +33,8 @@ draw = () => {
 }
 
 mousePressed = () => {
-    if (heartFlg && hearts.length < 350) return;
-    if (video[0].currentTime >= 160) return;
+    // if (heartFlg && hearts.length < 350) return;
+    // if (video[0].currentTime >= 160) return;
 
     hearts.push(new Heart());
 }
@@ -47,9 +47,11 @@ setup = () => {
 }
 
 addHeart = () => {
-    if (!heartFlg && hearts.length < 350) return;
+    // if (!heartFlg) return;
     console.log(hearts.length);
-    if (video.currentTime > 160) return;
+    if (hearts.length > 400) return;
+    // console.log(hearts.length);
+    // if (video.currentTime > 160) return;
     
     hearts.push(new Heart());
 }

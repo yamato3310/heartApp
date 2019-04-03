@@ -15,14 +15,14 @@
             <div class="border_top"></div><div class="border_radius_top"></div>
             <div class="scroll_text">scroll</div>
         </div>
-        <div>
+        <div class="figure-wrape">
             <figure>
                 <%= image_tag "logo.png" %>
             </figure>
             <div class="info">
                 <h1>情報科学専門学校</h1>
                 <h3>入学式パフォーマンス2019</h3>
-                <button class="app_button"><a href="http://192.168.3.14:3000/user/show">WEBアプリを起動 ></a></button>
+                <button class="app_button"><a href="http://iwasaki2019.com:3000/user/show">WEBアプリを起動 ></a></button>
             </div>
         </div>
     </header>
@@ -47,10 +47,10 @@
                     WEBアプリの使い方をご説明します。<br>
                 </span>
             </p>
-            <button class="start_button" onClick="location_button()">
+            <button class="start_button">
                 <div>
-                    <%= image_tag  "button_icon.png" %>
-                    <a href="http://192.168.3.14:3000/user/show"><span>起動</span></a>
+                    <%= image_tag  "button_icon.png" , :class => "start_button_img"%>
+                    <span>起動</span>
                 </div>
             </button>
             <div class="border_1 common_border"></div><div class="common_border_radius"></div></div>
@@ -115,11 +115,11 @@
             </small>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script>
-        function location_button () {
-            console.log("aaa");
-            location.href = "http://192.168.3.14:3000/user/show";
-        }
+        $(".start_button").click(() => {
+            location.href = "http://iwasaki2019.com:3000/user/show";
+        })
     </script>
 </body>
 </html>

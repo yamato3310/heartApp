@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;
+    position: absolute;
+    z-index: 0;
 }
 
 img {
@@ -21,6 +23,11 @@ header {
     background-size: cover;
     height: 100vh;
     scroll-snap-align: start;
+    position: relative;
+}
+
+.figure-wrape {
+    margin-bottom: 10vh;
 }
 
 header  div {
@@ -163,7 +170,7 @@ main section {
     position: absolute;
     right: 21px;
     margin-top: 30px;
-    z-index: 20;
+    z-index: 30;
 }
 
 .start_button div img {

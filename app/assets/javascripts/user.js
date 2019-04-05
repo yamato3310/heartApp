@@ -36,7 +36,6 @@ $('#event_container').click(function () {
 });
 
 $("#event_container").on("click", function () {
-    App.support.add('add');
     $(this).css("animation", "pulse 0.2s");
     let copied = $(this).clone(true);
     $(this).before(copied);

@@ -1,8 +1,8 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-let count = 0; // var使いたくないけど別の方法がわからない
-window.addEventListener("devicemotion", (e) => {
-    if (e.acceleration.x <= 10) return;
+var count = 0; // var使いたくないけど別の方法がわからない
+window.addEventListener('devicemotion', (e) => {
+    if (e.acceleration.x <= 20) return;
     count++;
     if (count !== 10) return; 
     count = 0;
@@ -11,7 +11,6 @@ window.addEventListener("devicemotion", (e) => {
 })
 
 window.onload = () => {
-
     window.scrollTo(0,0);
     
 $('#event_container').click(function () {
@@ -37,6 +36,7 @@ $('#event_container').click(function () {
 });
 
 $("#event_container").on("click", function () {
+    App.support.add('add');
     $(this).css("animation", "pulse 0.2s");
     let copied = $(this).clone(true);
     $(this).before(copied);
@@ -49,13 +49,3 @@ $("#event_container").on("click", function () {
         })
     })
 };
-
-// $("#start_button div").on("click", () => {
-//     console.log("aaa");
-//     location.href = "http://192.168.3.14:3000/user/show";
-// })
-
-// const location = () => {
-//     console.log("aaa");
-//     location.href = "http://192.168.3.14:3000/user/show";
-// }

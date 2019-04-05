@@ -242,7 +242,7 @@ main section {
 }
 
 .footer_image {
-    height: 65px;
+    height: 70px;
 }
 
 .main_text {
@@ -295,7 +295,7 @@ small {
     color: #2521FF;
     text-align: left;
     margin: 0 auto;
-    width: 311px;
+    width: 85vw;
     font-size: 0.8em;
     line-height: 200%;
 }
@@ -399,7 +399,7 @@ small {
 }
 
 .border_wrapper {
-    height: 13vh;
+    height: 14vh;
     width: 15vw;
     position: fixed;
     top: 0;
@@ -434,9 +434,9 @@ small span {
 
 .next_border_wrap {
     width: 15vw;
-    height: 50vh;
+    height: 40vh;
     margin: 5vh auto 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -444,6 +444,7 @@ small span {
     right: 0;
     left: 0;
     z-index: 100;
+    display: none;
 }
 
 .next-margin-top {
@@ -455,5 +456,10 @@ small span {
 }
 
 .next-margin-top .next_border {
-    height: 40vh;
+    height: 35vh;
+}
+
+.main_logo {
+    width: 68vw;
+    margin-bottom: 5px;
 }

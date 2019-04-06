@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'user/use'
+  root 'user#use'
 
   get 'user/show'
 

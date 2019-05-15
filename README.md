@@ -1,24 +1,30 @@
-# README
+#ISC入学式アプリ
+2019年岩崎学園進級式で使いました  
+ステージで踊っているアイドルを応援しよう！！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 成果物
+![heartApp](./image/heart.PNG)
 
-Things you may want to cover:
+使い方
+1. スマホを振る
+1. 上の写真のようにハートが追加される！
+1. ハートを出してアイドルを応援しよう！
+1. ハートのゲージが貯まると最後に新入生にメッセージが出ます！
 
-* Ruby version
+## 使用技術
+- Rails
+- Canvas
 
-* System dependencies
+## 終えてみて
+このアプリは実際にAWS(ECS, ECK)を使いデプロイして、4000人ほどに使っていただきました  
+結果としてはサーバーが落ちるという結果になってしまいました。。。  
+もともと5000人ほどが入る会場でしたので、それぐらいの人がさばければいいと思っていましたが  
+4000人ほどが同時にスマホを振り応援してもらえましたが、スマホを一度振るごとにwebsocketを２～３回飛ばしていました  
+このwebsocketを飛ばしていることに気づかずに結果として10000ほどのアクセスが来てサーバーが落ちてしまいました
+負荷テストをしていましたが、ALBを通して行っておらずテストも不十分でした
+自分で初めてデプロイまでしたアプリですが結果としては失敗で終わってしまいましたが、今後のアプリデプロイで今回の知見が活かせるようにしたい
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 今回のアプリに貢献したところ
+- websocket通信全般
+- Canvasを使用してハートを飛ばす処理
+- Railsでの処理

@@ -4,7 +4,7 @@ $("#add").on('click', () => {
   App.support.add('add');
 });
 
-var timer; //var... クラスを使えば解決？
+let timer; 
 $("#loop").on('click', () => {
   timer =setInterval(() => {
     App.support.add('add');

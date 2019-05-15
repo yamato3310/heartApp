@@ -6,15 +6,20 @@ let mainCanvas;
 
 let heartFlg = true;
 let video = document.getElementsByClassName('video');
+let timer; 
 
 document.addEventListener('keypress', e => {
     let video = document.getElementsByClassName('video');
     if (e.keyCode === 13 && !heartFlg) {
         heartFlg = true;
         video[0].play();
+        timer =setInterval(() => {
+            App.support.add('add');
+        }, 100);
     } else {
         heartFlg = false;
         video[0].pause();
+        clearInterval(timer);
     }
     
     if (e.keyCode === 115 && heartFlg == false) {
@@ -33,13 +38,10 @@ draw = () => {
 }
 
 mousePressed = () => {
-    // if (heartFlg && hearts.length < 350) return;
-    // if (video[0].currentTime >= 160) return;
-
     hearts.push(new Heart());
 }
 
-//setInterval(mousePressed, 50);
+setInterval(mousePressed, 50);
 
 setup = () => {
     createCanvas(screen.width, screen.height);
@@ -47,12 +49,8 @@ setup = () => {
 }
 
 addHeart = () => {
-    // if (!heartFlg) return;
     console.log(hearts.length);
     if (hearts.length > 400) return;
-    // console.log(hearts.length);
-    // if (video.currentTime > 160) return;
-    
     hearts.push(new Heart());
 }
 

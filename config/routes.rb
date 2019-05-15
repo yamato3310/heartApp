@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'user/show'
 
-  # get 'management_screen/show'
+  get 'management_screen/show'
 
   get 'screen/show'
 

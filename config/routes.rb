@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users', to: 'application#index'
+
   get 'user/use'
 
   get 'user/show'

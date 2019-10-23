@@ -15,7 +15,7 @@ window.onload = () => {
 
   $("#event_container").click(function() {
     count++;
-    if (count !== 10) {
+    if (count == 30) {
       App.support.add("add");
       count = 0;
     }

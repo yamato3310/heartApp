@@ -13,9 +13,9 @@ document.addEventListener("keypress", e => {
   if (e.keyCode === 13 && !heartFlg) {
     heartFlg = true;
     video[0].play();
-    timer = setInterval(() => {
-      App.support.add("add");
-    }, 100);
+    // timer = setInterval(() => {
+    //   App.support.add("add");
+    // }, 100);
   } else {
     heartFlg = false;
     video[0].pause();

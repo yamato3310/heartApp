@@ -19,7 +19,7 @@ document.addEventListener("keypress", e => {
   } else {
     heartFlg = false;
     video[0].pause();
-    clearInterval(timer);
+    // clearInterval(timer);
   }
 
   if (e.keyCode === 115 && heartFlg == false) {

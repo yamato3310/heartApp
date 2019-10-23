@@ -2,12 +2,11 @@
 // All this logic will automatically be available in application.js.
 var count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener("devicemotion", e => {
-  //   if (e.acceleration.x <= 10) return;
-  //   count++;
-  //   if (count !== 10) return;
-  //   count = 0;
-  //   $("#x").text(e.acceleration.x);
-  alert("hoge");
+  if (e.acceleration.x <= 10) return;
+  count++;
+  if (count !== 10) return;
+  count = 0;
+  $("#x").text(e.acceleration.x);
   App.support.add("add");
 });
 
@@ -15,8 +14,11 @@ window.onload = () => {
   window.scrollTo(0, 0);
 
   $("#event_container").click(function() {
-    App.support.add("add");
-    alert("huga");
+    count++;
+    if (count !== 10) {
+      App.support.add("add");
+      count = 0;
+    }
     if ($("#container").hasClass("red")) {
       $("#container").removeClass("red");
       $("#container").addClass("yellow");

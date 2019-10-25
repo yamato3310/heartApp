@@ -4,7 +4,7 @@ let hearts = [];
 let image;
 let mainCanvas;
 
-let heartFlg = true;
+let heartFlg = false;
 let video = document.getElementsByClassName("video");
 let timer;
 

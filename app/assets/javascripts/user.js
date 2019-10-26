@@ -1,17 +1,33 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 var count = 0; // var使いたくないけど別の方法がわからない
-// window.addEventListener("devicemotion", e => {
-//   alert("add")
-//   if (e.acceleration.x <= 10) return;
-//   count++;
-//   if (count !== 10) return;
-//   count = 0;
-//   $("#x").text(e.acceleration.x);
-//   App.support.add("add");
-// });
+window.addEventListener('DOMContentLoaded', function() {
+  alert( 'onload' );
+  // window.DeviceMotionEvent.requestPermission()
+  // // feature detect
+  if ( typeof window.DeviceMotionEvent.requestPermission === 'function' ) {
+    window.DeviceMotionEvent.requestPermission()
+      .then( permissionState => {
+        if ( permissionState === 'granted' ) {
+          window.addEventListener( 'devicemotion', () => {
+              if (e.acceleration.x <= 10) return;
+              count++;
+              if (count !== 10) return;
+              count = 0;
+              $("#x").text(e.acceleration.x);
+              App.support.add("add");
+          });
+        }
+      } )
+      .catch( console.error );
+  } else {
+    // handle regular non iOS 13+ devices
+  }
+})
 
-const timer = setInterval(() => App.support.add("add"), 3000)
+
+
+// const timer = setInterval(() => App.support.add("add"), 3000)
 
 window.onload = () => {
   window.scrollTo(0, 0);

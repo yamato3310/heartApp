@@ -8,6 +8,8 @@ let heartFlg = false;
 let video = document.getElementsByClassName("video");
 let timer;
 
+
+
 document.addEventListener("keypress", e => {
   let video = document.getElementsByClassName("video");
   // video[0].play();

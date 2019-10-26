@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
     window.DeviceMotionEvent.requestPermission()
       .then( permissionState => {
         if ( permissionState === 'granted' ) {
-          window.addEventListener( 'devicemotion', () => {
+          window.addEventListener( 'devicemotion', e => {
               if (e.acceleration.x <= 10) return;
               count++;
               if (count !== 10) return;
@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', function() {
               $("#x").text(e.acceleration.x);
               App.support.add("add");
           });
+        } else {
+          alert(permissionState)
         }
       } )
       .catch( console.error );

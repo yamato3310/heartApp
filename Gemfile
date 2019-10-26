@@ -49,3 +49,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem 'jquery-turbolinks' # ページ移転後にjavascriptを発火するためのもの
+gem 'pagy'

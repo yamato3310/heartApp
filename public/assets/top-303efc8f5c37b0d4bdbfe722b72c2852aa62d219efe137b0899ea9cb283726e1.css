@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/* line 1, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+body {
+  font-size: 16px;
+}
+
+/* line 11, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* line 17, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+header {
+  background: url("./main_image.png") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+/* line 24, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+header div.info_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 32, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+header div.info_container figure img {
+  width: 23vw;
+  height: auto;
+}
+
+/* line 37, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+header div.info_container span {
+  display: block;
+}
+
+/* line 41, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.app_button {
+  border: none;
+  background-color: #231FFF;
+  border-radius: 22pt 22pt 22pt 22pt;
+  width: 70vw;
+  height: 50px;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  font-size: 14pt;
+  margin-top: 10px;
+}
+
+/* line 52, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info {
+  text-align: left;
+  width: 77%;
+  padding: 0 15px 8px;
+}
+
+/* line 58, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info h1 {
+  color: #2521FF;
+  font-size: 2.25em;
+}
+
+/* line 63, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info h3 {
+  color: #2521FF;
+  font-size: 1.3em;
+  letter-spacing: 0.06em;
+}
+
+/* line 69, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 74, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.summary {
+  background-image: url("./background-image.png");
+}
+
+/* line 78, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#header_wrap {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+}
+
+/* line 84, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info_img {
+  display: flex;
+}
+
+/* line 88, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info_img img {
+  margin: auto;
+}
+
+/* line 92, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+main {
+  background: url("./background-image.png") center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 400vh;
+}
+
+/* line 99, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#mask {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.68));
+  background-size: cover;
+  width: 100vw;
+  height: 400vh;
+}
+
+/* line 106, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.attention {
+  text-align: center;
+  color: #D1D1D1;
+  font-size: 12pt;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  line-height: 34px;
+  margin-top: 10px;
+}
+
+/* line 115, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.attention span {
+  display: block;
+}
+
+/* line 119, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.attention_section {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  vertical-align: middle;
+  /* line-height: auto; */
+}
+
+/* line 127, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.strong {
+  /* display: table-cell; */
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  font-size: 18pt;
+  font-weight: 700;
+  height: 0.5vh;
+  color: #7568FF;
+  margin: 10px;
+  /* line-height: 0; */
+}
+
+/* line 138, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+main section ul li {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 147, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+main section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+/* line 152, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info_img {
+  height: 30%;
+  background: url("./info_back_image.png") no-repeat left;
+  background-size: cover;
+}
+
+/* line 158, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.info_img img {
+  text-align: center;
+}
+
+/* line 162, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.start_button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #231FFF;
+  border: none;
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  font-size: 11px;
+  position: absolute;
+  right: 21px;
+  margin-top: 30px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  display: none;
+}
+
+/* line 179, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.start_button div img {
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+/* line 186, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.start_button div {
+  display: block;
+}
+
+/* line 190, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.number_label {
+  border-radius: 50%;
+  background-color: #231FFF;
+  width: 45px;
+  height: 45px;
+  color: #D1D1D1;
+  display: flex;
+  margin: 30px auto 20px;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/* line 202, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.number_label div {
+  margin: auto;
+}
+
+/* line 206, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.description {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 88vw;
+  height: 28vh;
+  z-index: 5;
+}
+
+/* line 216, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.app_main_image {
+  width: 90vw;
+  max-height: 200px;
+  border: 1px solid #707070;
+  object-fit: cover;
+}
+
+/* line 223, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.cover_app_image {
+  width: 25vw;
+  position: absolute;
+  right: 20px;
+  margin-top: -70px;
+  z-index: 10;
+  transform: rotate(10deg);
+}
+
+/* line 232, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.app_image {
+  width: 32%;
+  max-height: 200px;
+  border: 1px solid #707070;
+}
+
+/* line 238, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.app_image_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+
+/* line 244, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.footer_image {
+  height: 70px;
+}
+
+/* line 248, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.main_text {
+  font-size: 1.25em;
+  color: #D1D1D1;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  line-height: 200%;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* line 257, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+footer {
+  background-image: url("./footer_back_image.png");
+  background-size: cover;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+/* line 264, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.footer_mask {
+  background-color: rgba(221, 221, 221, 0.8);
+  width: 100vw;
+  padding: 5vh 0;
+}
+
+/* line 270, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#footer_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* 
+#footer_logo_container figure {
+    width: 40px;
+    height: 65px;
+} */
+/* line 282, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.day {
+  text-align: center;
+  color: #2521FF;
+  font-size: 18pt;
+  margin: 10px 0;
+  font-weight: 300;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* line 292, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+small {
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  display: block;
+  color: #2521FF;
+  text-align: left;
+  margin: 0 auto;
+  width: 85vw;
+  font-size: 0.8em;
+  line-height: 200%;
+}
+
+/* line 303, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#footer_top {
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* line 308, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#footer_top span:nth-child(1) {
+  display: block;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  font-size: 2em;
+  height: 33px;
+  width: 264px;
+  color: #2521FF;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* letter-spacing: 0.05em; */
+}
+
+/* line 321, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+#footer_top span:nth-child(2) {
+  font-size: 1.2em;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  color: #2521FF;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+}
+
+/* line 330, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.footer_wrapper {
+  /* margin: 55px 42px 30px 34px; */
+}
+
+/* line 334, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.common_border {
+  margin: 0 auto;
+  margin-top: 9vh;
+  width: 1px;
+  background-color: #231FFF;
+  text-align: center;
+  z-index: 20;
+  position: relative;
+}
+
+/* line 344, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.common_border_radius {
+  width: 10px;
+  height: 10px;
+  background-color: #231FFF;
+  border-radius: 50%;
+  z-index: 20;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  left: 48.5%;
+}
+
+/* line 356, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_1 {
+  height: 21.5vh;
+}
+
+/* line 360, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_1 div {
+  margin-top: 10vh;
+}
+
+/* line 364, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_2 {
+  height: 36vh;
+}
+
+/* line 368, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_3 {
+  height: 31vh;
+}
+
+/* line 372, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_top {
+  height: 10vh;
+  width: 1px;
+  background-color: #231FFF;
+  z-index: 20;
+}
+
+/* line 379, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_animation {
+  animation: border_anime 2s ease 0s infinite normal;
+}
+
+@keyframes border_anime {
+  0% {
+    height: 9vh;
+    opacity: 0;
+  }
+  25% {
+    height: 9vh;
+    opacity: 1;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+/* line 401, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_wrapper {
+  height: 14vh;
+  width: 15vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+/* line 414, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.border_radius_top {
+  width: 10px;
+  height: 10px;
+  background-color: #231FFF;
+  border-radius: 50%;
+}
+
+/* line 421, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.scroll_text {
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  /* position: absolute;
+  top: 8.5vh;
+  right: -5vw; */
+  color: #231FFF;
+  letter-spacing: 0.05em;
+}
+
+/* line 430, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+small span {
+  font-family: 'Franklin Gothic Medium','Futura',sans-serif;
+  font-weight: bold;
+}
+
+/* line 435, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.next_border_wrap {
+  width: 15vw;
+  height: 40vh;
+  margin: 5vh auto 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+/* line 450, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.next-margin-top {
+  margin-top: 55vh;
+}
+
+/* line 454, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.next_border {
+  height: 45vh;
+}
+
+/* line 458, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.next-margin-top .next_border {
+  height: 35vh;
+}
+
+/* line 462, /home/tsunashima/ドキュメント/git_test/heartApp/app/assets/stylesheets/top.scss */
+.main_logo {
+  width: 68vw;
+  margin-bottom: 5px;
+}

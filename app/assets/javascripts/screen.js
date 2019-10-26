@@ -7,10 +7,11 @@ let mainCanvas;
 let heartFlg = false;
 let video = document.getElementsByClassName("video");
 let timer;
-let video = document.getElementsByClassName("video");
-video[0].play();
+
 document.addEventListener("keypress", e => {
-  if (e.keyCode === 13 && !heartFlg) {
+  let video = document.getElementsByClassName("video");
+  // video[0].play();
+  if (e.keyCode === 13 || e.keyCode == 78 && !heartFlg) {
     heartFlg = true;
     video[0].play();
     // timer = setInterval(() => {

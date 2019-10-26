@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 var count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener("devicemotion", e => {
+  alert("add")
   if (e.acceleration.x <= 10) return;
   count++;
   if (count !== 10) return;
@@ -9,6 +10,24 @@ window.addEventListener("devicemotion", e => {
   $("#x").text(e.acceleration.x);
   App.support.add("add");
 });
+
+const onClick = () => {
+  console.log( 'clicked' );
+  // alert("許可")
+  // feature detect
+  if ( typeof DeviceMotionEvent.requestPermission === 'function' ) {
+    DeviceMotionEvent.requestPermission()
+      .then( permissionState => {
+        if ( permissionState === 'granted' ) {
+          window.addEventListener( 'devicemotion', handleDeviseMotion );
+        }
+      } )
+      .catch( console.error );
+  } else {
+    // handle regular non iOS 13+ devices
+  }
+}
+document.querySelector( 'body' ).addEventListener( 'click', onClick )
 
 window.onload = () => {
   window.scrollTo(0, 0);

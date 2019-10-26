@@ -53,3 +53,4 @@ production:
   database: heartApp_production
   username: heartApp
   password: <%= ENV['HEARTAPP_DATABASE_PASSWORD'] %>
+  strict: false

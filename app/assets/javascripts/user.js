@@ -33,9 +33,9 @@ function doSomethingLoop(time) {
   setTimeout(() => doSomethingLoop(time - 70), time);
 }
 
-for (let i = 0; i < 70; i++) {
-  doSomethingLoop(Math.random() * 15000 + 5000)
-}
+// for (let i = 0; i < 70; i++) {
+//   doSomethingLoop(Math.random() * 15000 + 5000)
+// }
 
 // const timer = setInterval(() => App.support.add("add"), 3000)
 

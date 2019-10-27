@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 var count = 0; // var使いたくないけど別の方法がわからない
 window.addEventListener('DOMContentLoaded', function() {
-  alert( 'onload' );
+  // alert( 'onload' );
   // window.DeviceMotionEvent.requestPermission()
   // // feature detect
   if ( typeof window.DeviceMotionEvent.requestPermission === 'function' ) {
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
               App.support.add("add");
           });
         } else {
-          alert(permissionState)
+          // alert(permissionState)
         }
       } )
       .catch( console.error );
@@ -28,6 +28,14 @@ window.addEventListener('DOMContentLoaded', function() {
 })
 
 
+function doSomethingLoop(time) {
+  App.support.add("add")
+  setTimeout(() => doSomethingLoop(time - 70), time);
+}
+
+for (let i = 0; i < 70; i++) {
+  doSomethingLoop(Math.random() * 15000 + 5000)
+}
 
 // const timer = setInterval(() => App.support.add("add"), 3000)
 

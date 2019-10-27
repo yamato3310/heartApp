@@ -70,7 +70,7 @@ function Heart() {
     "#FF7E7E"
   ];
   this.num = Math.floor(Math.random() * 6);
-  this.scale = Math.random() * 0.5;
+  this.scale = Math.random() * 0.4 + 0.1;
 
   this.update = function() {
     if (this.posY <= 0) this.deleteHeart(this);
@@ -80,7 +80,7 @@ function Heart() {
   this.display = function() {
     fill(this.color[this.num]);
     scale(this.scale);
-    let posX = this.posX * (1 / this.scale);
+    let posX = this.posX * (1 / this.scale); 
     let posY = this.posY * (1 / this.scale);
     let ctx = canvas.getContext("2d");
     ctx.beginPath();

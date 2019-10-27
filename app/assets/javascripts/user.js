@@ -39,17 +39,25 @@ window.addEventListener('DOMContentLoaded', function() {
 //   doSomethingLoop(Math.random() * 15000 + 5000)
 // }
 
-const timer = setInterval(() => App.support.add("add"), 5000)
+// const timer = setInterval(() => App.support.add("add"), 5000)
+var flg = true
+setInterval(() => flg = true, 3000)
 
 window.onload = () => {
   window.scrollTo(0, 0);
 
   $("#event_container").click(function() {
     count++;
-    if (count == 2) {
-      App.support.add("add");
-      count = 0;
+    // if (count == 2) {
+    //   App.support.add("add");
+    //   count = 0;
+    // }
+    if (flg) {
+      App.support.add("add")
+      flg = false
     }
+
+    
     if ($("#container").hasClass("red")) {
       $("#container").removeClass("red");
       $("#container").addClass("yellow");

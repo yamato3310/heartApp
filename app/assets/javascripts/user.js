@@ -28,23 +28,25 @@ window.addEventListener('DOMContentLoaded', function() {
 })
 
 
-function doSomethingLoop(time) {
-  App.support.add("add")
-  setTimeout(() => doSomethingLoop(time - 70), time);
-}
+// function doSomethingLoop(time) {
+//   App.support.add("add")
+//   setTimeout(() => doSomethingLoop(time - 70), time);
+// }
+
+// doSomethingLoop(Math.random() * 15000 + 5000)
 
 // for (let i = 0; i < 70; i++) {
 //   doSomethingLoop(Math.random() * 15000 + 5000)
 // }
 
-// const timer = setInterval(() => App.support.add("add"), 3000)
+const timer = setInterval(() => App.support.add("add"), 5000)
 
 window.onload = () => {
   window.scrollTo(0, 0);
 
   $("#event_container").click(function() {
     count++;
-    if (count == 5) {
+    if (count == 2) {
       App.support.add("add");
       count = 0;
     }
